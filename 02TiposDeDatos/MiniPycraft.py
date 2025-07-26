@@ -4,10 +4,10 @@ opcion = 0
 pjs = [{
     "nombre": "Ariel, le mague",
     "vida": 100,
-    "fuerza": 10,
+    "fuerza": 5,
     "inteligencia": 25,
     "defensa": 5,
-    "dado": 10,
+    "dado": 8,
     "esta_vivo" : True
 },
 {
@@ -57,21 +57,21 @@ pnj_2 = [
     {"nombre": "Pinganilla",
     "vida": 50,
     "fuerza": 5,
-    "inteligencia": 7,
+    "inteligencia": 3,
     "defensa": 3,
     "dado": 4,
     "esta_vivo" : True},
     {"nombre": "Trampero",
     "vida": 50,
     "fuerza": 6,
-    "inteligencia": 5,
+    "inteligencia": 4,
     "defensa": 1,
     "dado": 4,
     "esta_vivo" : True},
     {"nombre": "Mago ladrón",
     "vida": 40,
     "fuerza": 6,
-    "inteligencia": 10,
+    "inteligencia": 7,
     "defensa": 3,
     "dado": 6,
     "esta_vivo" : True},
@@ -79,7 +79,7 @@ pnj_2 = [
 
 pnj_boss= {
     "nombre": "Bug, la Mandamás",
-    "vida": 150,
+    "vida": 100,
     "fuerza": 6,
     "inteligencia": 10,
     "defensa": 3,
@@ -97,5 +97,40 @@ pj = {
     "esta_vivo" : True
 }
 
-def pj_atacar(enemigo):
-    print(f"{pj["nombre"]} ataca a {enemigo["nombre"]}.")
+def comprobar_vida(pj):
+    if pj["vida"] > 0:
+        return True
+    print(f"{pj["vida"]} ha muerto.")
+    return False
+
+def validar_daño(daño):
+    if daño < 0:
+        return 0
+    return daño
+
+def ataque_cuerpo_a_cuerpo(pj1, pj2):
+    daño = pj1["fuerza"] * random.randint(0, pj1["dado"] + 1)
+    daño = validar_daño(daño)
+    pj2["vida"] -= daño - pj2["defensa"]
+    print(f"{pj1["nombre"]} le inflinge {daño} puntos de daño cuerpo a cuerpo a {pj2["nombre"]}")
+
+def ataque_magico(pj1, pj2):
+    daño = pj1["inteligencia"] * random.randint(0, pj1["dado"] + 1)
+    daño = validar_daño(daño)
+    pj2["vida"] -= daño - pj2["inteligencia"]
+    print(f"{pj1["nombre"]} le inflinge {daño} puntos de daño mágico a {pj2["nombre"]}")
+
+def pj_ataca(pj1, pj2):
+    print(f"{pj1["nombre"]} se prepara para atacar a {pj2["nombre"]}.")
+    opcion_ataque = int(input("""
+    1. Atacar cuerpo a cuerpo (usar fuerza).
+    2. Atacar con un hechizo (usar inteligencia).
+    """))
+    if opcion_ataque == 1:
+        ataque_cuerpo_a_cuerpo(pj1, pj2)
+        comprobar_vida(pj2)
+    if opcion_ataque == 2:
+        ataque_magico(pj1, pj2)
+        comprobar_vida(pj2)
+
+
