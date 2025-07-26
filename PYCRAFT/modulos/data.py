@@ -33,7 +33,7 @@ pjs = [{
 },
 {
     "nombre": f"{GREEN}Boadicea, la guerrera ⚔️{RESET}",
-    "vida": 1,
+    "vida": 200,
     "vida_por_defecto": 200,
     "fuerza": 15,
     "inteligencia": 1,
