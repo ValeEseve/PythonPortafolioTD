@@ -1,6 +1,6 @@
 from .colores import RED, RESET
 from .iniciar_juego import validar_opcion
-from .data import pj, pjs, cuerpo_a_cuerpo, daño_mágico, pj_muerto
+from .data import pjs, cuerpo_a_cuerpo, daño_mágico, pj_muerto
 import random
 
 def comprobar_vida(pj):
@@ -12,7 +12,9 @@ def comprobar_vida(pj):
     return False
 
 def mostrar_vida(pj):
-    print(f"{pj["nombre"]} tiene {pj["vida"]} puntos de vida")
+    if pj["esta_vivo"]:
+        print(f"{pj["nombre"]} tiene {pj["vida"]} puntos de vida")
+    return
 
 def validar_daño(daño):
     if daño < 0:
@@ -44,7 +46,8 @@ def pj_ataca(pj1, pj2):
     if opcion_ataque == 1:
         ataque_cuerpo_a_cuerpo(pj1, pj2)
         pj2["esta_vivo"] = comprobar_vida(pj2)
+        mostrar_vida(pj2)
     if opcion_ataque == 2:
         ataque_magico(pj1, pj2)
         pj2["esta_vivo"] = comprobar_vida(pj2)
-    mostrar_vida(pj2)
+        mostrar_vida(pj2)

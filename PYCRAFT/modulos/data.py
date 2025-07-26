@@ -13,11 +13,11 @@ marco = f"""
 {CYAN}╚═══════════════════════════════════════════╝{RESET}
 """
 pj_muerto = f"""
-{CYAN}╔═══════════════════════════════════════════╗
-{CYAN}║             {YELLOW}{BOLD}💀 HAS MUERTO 💀{RESET}{CYAN}              ║
-{CYAN}║                                           ║
-{CYAN}║ {GREEN}     Tu aventura llega hasta aquí...    {CYAN}  ║
-{CYAN}╚═══════════════════════════════════════════╝{RESET}
+{RED}╔═══════════════════════════════════════════╗
+{RED}║            {YELLOW}{BOLD}💀  HAS MUERTO 💀{RESET}{RED}              ║
+{RED}║                                           ║
+{RED}║      Tu aventura llega hasta aquí...      ║
+{RED}╚═══════════════════════════════════════════╝{RESET}
 """
 
 # PJS
