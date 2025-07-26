@@ -14,16 +14,13 @@ def mostrar_tutorial():
     input()
 
 
-def validar_opcion(opciones, opcion=0):
-    while opcion == 0:
+def validar_opcion(opciones):
+    while True:
         try:
             opcion = int(input())
-            while opcion == 0:
-                if opcion > opciones or opcion < 1:
-                    print( f"{error}{error_opciones}{opciones}")
-                    opcion = int(input())
-                else:
-                    return opcion
+            if 1 <= opcion <= opciones:
+                return opcion - 1
+            else:
+                print(f"{error}{error_opciones}{opciones}")
         except ValueError:
             print(error)
-            opcion = 0

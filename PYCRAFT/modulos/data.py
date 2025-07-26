@@ -14,7 +14,7 @@ marco = f"""
 
 # PJS
 pjs = [{
-    "nombre": f"{CYAN}Ariel, le mague{RESET}",
+    "nombre": f"{CYAN}Ariel, le mague 🧙{RESET}",
     "vida": 100,
     "fuerza": 5,
     "inteligencia": 25,
@@ -23,7 +23,7 @@ pjs = [{
     "esta_vivo" : True
 },
 {
-    "nombre": f"{GREEN}Boadicea, la guerrera{RESET}",
+    "nombre": f"{GREEN}Boadicea, la guerrera ⚔️{RESET}",
     "vida": 200,
     "fuerza": 15,
     "inteligencia": 5,
@@ -32,7 +32,7 @@ pjs = [{
     "esta_vivo" : True
 },
 {
-    "nombre": f"{YELLOW}Robin, el arquero{RESET}",
+    "nombre": f"{YELLOW}Robin, el arquero 🏹{RESET}",
     "vida": 150,
     "fuerza": 15,
     "inteligencia": 15,
@@ -42,21 +42,21 @@ pjs = [{
 }]
 
 pnj_1 = [
-    {"nombre": "Rata",
+    {"nombre": "Ratón 🐀",
     "vida": 20,
     "fuerza": 5,
     "inteligencia": 1,
     "defensa": 1,
     "dado": 4,
     "esta_vivo" : True},
-    {"nombre": "Murciélago",
+    {"nombre": "Murciélago 🦇",
     "vida": 20,
     "fuerza": 6,
     "inteligencia": 2,
     "defensa": 1,
     "dado": 4,
     "esta_vivo" : True},
-    {"nombre": "Baba con conciencia",
+    {"nombre": "Monstruo de baba 😶",
     "vida": 50,
     "fuerza": 6,
     "inteligencia": 1,
@@ -66,21 +66,21 @@ pnj_1 = [
 ]
 
 pnj_2 = [
-    {"nombre": "Pinganilla",
+    {"nombre": "Pinganilla 🥷",
     "vida": 50,
     "fuerza": 5,
     "inteligencia": 3,
     "defensa": 3,
     "dado": 4,
     "esta_vivo" : True},
-    {"nombre": "Trampero",
+    {"nombre": "Trampero 🥷",
     "vida": 50,
     "fuerza": 6,
     "inteligencia": 4,
     "defensa": 1,
     "dado": 4,
     "esta_vivo" : True},
-    {"nombre": "Mago ladrón",
+    {"nombre": "Mago ladrón 🧙‍♂️",
     "vida": 40,
     "fuerza": 6,
     "inteligencia": 7,
@@ -90,7 +90,7 @@ pnj_2 = [
 ]
 
 pnj_boss= {
-    "nombre": f"{RED}Bug, la Mandamás{RESET}",
+    "nombre": f"{RED}Bug, la Mandamás{RESET} 😠",
     "vida": 100,
     "fuerza": 6,
     "inteligencia": 10,
