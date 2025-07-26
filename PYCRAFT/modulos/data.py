@@ -1,3 +1,18 @@
+from .colores import RED, YELLOW, GREEN, CYAN, BOLD, RESET
+
+# FRASES
+pycraft = f"{YELLOW}{BOLD}PYCRAFT{RESET}"
+cuerpo_a_cuerpo = f"{GREEN}cuerpo a cuerpo{RESET}"
+daño_mágico= f"{CYAN}daño mágico{RESET}"
+marco = f"""
+{CYAN}╔═══════════════════════════════════════════╗
+{CYAN}║       {YELLOW}{BOLD}⚔️  BIENVENID@   A  PYCRAFT ⚔️{RESET}{CYAN}        ║
+{CYAN}║                                           ║
+{CYAN}║ {GREEN}       Tu aventura comienza aquí...     {CYAN}  ║
+{CYAN}╚═══════════════════════════════════════════╝{RESET}
+"""
+
+# PJS
 pjs = [{
     "nombre": f"{CYAN}Ariel, le mague{RESET}",
     "vida": 100,
@@ -75,7 +90,7 @@ pnj_2 = [
 ]
 
 pnj_boss= {
-    "nombre": "Bug, la Mandamás",
+    "nombre": f"{RED}Bug, la Mandamás{RESET}",
     "vida": 100,
     "fuerza": 6,
     "inteligencia": 10,

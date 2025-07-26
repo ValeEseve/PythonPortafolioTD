@@ -1,4 +1,4 @@
-from colores import RED, YELLOW, GREEN, CYAN, BOLD, RESET
+from .colores import RED, YELLOW, GREEN, CYAN, BOLD, RESET
 import random
 
 def comprobar_vida(pj):
